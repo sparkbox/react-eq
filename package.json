@@ -1,10 +1,11 @@
 {
   "name": "react-eq",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Element Queries for React",
   "main": "lib/eq.js",
   "scripts": {
-    "start": "mkdir -p lib && babel -o lib/eq.js src/eq.js",
+    "postinstall": "npm run build",
+    "build": "mkdir -p lib && babel src/eq.js -o lib/eq.js",
     "test": "karma start",
     "dev": "concurrently 'webpack -w' 'karma start --auto-watch'"
   },
@@ -25,6 +26,7 @@
   "devDependencies": {
     "autobind-decorator": "^1.4.1",
     "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
