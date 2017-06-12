@@ -1,6 +1,6 @@
 {
   "name": "react-eq",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Element Queries for React",
   "main": "lib/eq.js",
   "scripts": {
@@ -23,8 +23,10 @@
     "url": "https://github.com/sparkbox/react-eq/issues"
   },
   "homepage": "https://github.com/sparkbox/react-eq#readme",
+  "dependencies": {
+    "autobind-decorator": "^1.4.1"
+  },
   "devDependencies": {
-    "autobind-decorator": "^1.4.1",
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
