@@ -1,4 +1,5 @@
-import React, { Component, cloneElement } from 'react';
+import { Component, cloneElement } from 'react';
+import PropTypes from 'prop-types';
 import throttle from 'lodash/throttle';
 import autobind from 'autobind-decorator';
 
@@ -61,8 +62,8 @@ class ElementQuery extends Component {
 }
 
 ElementQuery.propTypes = {
-  queries: React.PropTypes.object.isRequired, /* eslint react/forbid-prop-types: 0*/
-  children: React.PropTypes.element.isRequired,
+  queries: PropTypes.object.isRequired, /* eslint react/forbid-prop-types: 0*/
+  children: PropTypes.element.isRequired,
 };
 
 ElementQuery.defaultProps = {
