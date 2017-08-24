@@ -2,6 +2,7 @@ import { Component, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import throttle from 'lodash/throttle';
 import autobind from 'autobind-decorator';
+import './custom-event';
 
 const RESIZE_THROTTLE = 500;
 
@@ -32,6 +33,7 @@ class ElementQuery extends Component {
 
   @autobind
   createRef(el) {
+    this.props.queryRef(el);
     this.containingEl = el;
   }
 
@@ -51,7 +53,13 @@ class ElementQuery extends Component {
 
   @autobind
   apply() {
+    const prevAttr = this.containingEl.getAttribute('data-eq-state');
     this.containingEl.setAttribute('data-eq-state', this.state.currentEQ);
+
+    if (prevAttr !== this.state.currentEQ) {
+      const e = new CustomEvent('eq-update', { bubbles: true });
+      this.containingEl.dispatchEvent(e);
+    }
   }
 
   render() {
@@ -64,10 +72,12 @@ class ElementQuery extends Component {
 ElementQuery.propTypes = {
   queries: PropTypes.object.isRequired, /* eslint react/forbid-prop-types: 0*/
   children: PropTypes.element.isRequired,
+  queryRef: PropTypes.func,
 };
 
 ElementQuery.defaultProps = {
   queries: {},
+  queryRef() {},
 };
 
 module.exports = ElementQuery;

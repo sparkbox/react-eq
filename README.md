@@ -26,3 +26,7 @@ Result when element width >= 900px:
   ◻️ ◽️ ◼︎ I'll act differently at 600px and 900px. ◼︎ ◽️ ◻️
 </div>
 ```
+
+## Events:
+
+When `data-eq-state` is updated, it will trigger a `eq-update` event on the `div`. This event will bubble up to the `window`.
