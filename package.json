@@ -1,6 +1,6 @@
 {
   "name": "react-eq",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Element Queries for React",
   "main": "lib/eq.js",
   "scripts": {
