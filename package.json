@@ -37,6 +37,7 @@
     "babel-preset-react": "^6.24.1",
     "chai": "^3.5.0",
     "cheerio": "^1.0.0-rc.1",
+    "concurrently": "^3.5.0",
     "eslint": "^3.18.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-config-airbnb-base": "^11.1.0",
