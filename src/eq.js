@@ -2,7 +2,7 @@ import { Component, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import throttle from 'lodash/throttle';
 import autobind from 'autobind-decorator';
-import './custom-event';
+import 'custom-event-autopolyfill';
 
 const RESIZE_THROTTLE = 500;
 

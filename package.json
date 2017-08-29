@@ -24,6 +24,7 @@
   "homepage": "https://github.com/sparkbox/react-eq#readme",
   "dependencies": {
     "autobind-decorator": "^1.4.1",
+    "custom-event-autopolyfill": "^0.1.3",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
