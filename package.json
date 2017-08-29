@@ -6,7 +6,7 @@
   "scripts": {
     "prepublish": "babel ./src --out-dir ./lib",
     "test": "webpack && karma start",
-    "start": "concurrently 'webpack -w' 'karma start --auto-watch'"
+    "start": "concurrently 'babel --watch ./src --out-dir ./lib' 'webpack -w' 'karma start --auto-watch'"
   },
   "repository": {
     "type": "git",
