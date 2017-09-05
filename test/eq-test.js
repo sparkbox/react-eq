@@ -67,5 +67,17 @@ describe('Element Queries', () => {
 
       expect(text).to.equal('Hello!');
     });
+
+    it('exits gracefully when the ref is missing', () => {
+      ReactDOM.render(
+        <ElementQuery queries={{ medium: 600, large: 900 }} />,
+      appContainer);
+    });
+
+    it('warns when the ref is missing', () => {
+      ReactDOM.render(
+        <ElementQuery queries={{ medium: 600, large: 900 }} />,
+      appContainer);
+    });
   });
 });

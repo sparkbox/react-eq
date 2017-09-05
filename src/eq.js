@@ -12,6 +12,8 @@ class ElementQuery extends Component {
 
     this.state = { currentEQ: '' };
 
+    this.resizeHandler = throttle(this.checkWidth, RESIZE_THROTTLE);
+
     if (!Object.keys(props.queries).length) {
       console.warn('No `queries` specified for ElementQuery');
     }
@@ -21,11 +23,19 @@ class ElementQuery extends Component {
     this.checkWidth();
 
     if (typeof window === 'object') {
-      window.addEventListener('resize', throttle(this.checkWidth, RESIZE_THROTTLE));
+      window.addEventListener('resize', this.resizeHandler);
+    }
+  }
+
+  componentWillUnmount() {
+    if (typeof window === 'object') {
+      window.removeEventListener('resize', this.resizeHandler);
     }
   }
 
   copyChild(child) {
+    if (!child) return null;
+
     return cloneElement(child, {
       ref: this.createRef,
     });
@@ -39,6 +49,8 @@ class ElementQuery extends Component {
 
   @autobind
   checkWidth() {
+    if (!this.containingEl) return;
+
     const currentWidth = this.containingEl.offsetWidth;
     const matches = [];
 
