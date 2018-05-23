@@ -1,0 +1,123 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>react-eq | Element based queries for React</title>
+  <meta name="description" content="">
+  <link rel="apple-touch-icon" href="./images/touch-icon.png" />
+  <link rel="mask-icon" href="./images/pinned-icon.svg" color="#50B7C8">
+  <link rel="icon" href="./images/touch-icon.png" sizes="320X320" />
+  <link rel="shortcut icon" href="./images/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./images/touch-icon.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="dist/css/base.css">
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="images/icons/icons.fallback.css">
+  <![endif]-->
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <header>
+      <h1 class="main-heading icon-reactEQ">React-EQ</h1>
+      <p class="tagline">Element based queries for React</p>
+    </header>
+
+    <section>
+      <p class="description">React-EQ is an implementation of element queries that uses the same API as
+        <a href="https://github.com/Snugug/eq.js/">Snugug's eq.js</a>.</p>
+
+      <div>
+        <ul class="getItList">
+          <li class="getItList-item">
+            <code class="npm">
+              npm install react-eq
+            </code>
+          </li>
+          <li class="getItList-item">
+            <a href="//github.com/sparkbox/react-eq" class="download">Download from GitHub</a>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="section-heading">Demo</h2>
+      <div class="demo-area"></div>
+
+      <div>
+        <h2 class="section-heading">Examples</h2>
+
+        <pre>
+<code>
+  import React from 'react';
+  import ElementQuery from 'react-eq';
+
+  const Demo = () => {
+    const queries = {
+      'small': 200,
+      'medium': 400
+    };
+     
+    return (
+      &lt;ElementQuery queries={queries}&gt;
+        &lt;h1&gt;Hello&lt;/h1&gt;
+      &lt;/ElementQuery&gt;
+    );
+  };
+</code>
+</pre>
+      </div>
+
+      <div>
+        <h2 class="section-heading">Props</h2>
+        <article class="option">
+          <h3>queries</h3>
+          <p>Type:
+            <code>object</code>
+          </p>
+          <p>List of all sizes and a label for that size. It should be in the form:</p>
+          <pre>
+<code>
+  {
+    'small': 200,
+    'medium': 400
+  }
+</code>
+          </pre>
+        </article>
+      </div>
+
+      <footer>
+        <h2 class="section-heading">Legal Stuff</h2>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+          <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+        </a>
+        <br />This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.
+      </footer>
+    </section>
+  </div>
+  <footer class="sparkbox-footer">
+    <a href="http://seesparkbox.com" title="Go to seesparkbox.com">
+      <div class="icon-sparkbox"></div>
+    </a>
+
+    <p>
+      react-eq is a project of
+      <a href="http://seesparkbox.com" title="Go to seesparkbox.com">Sparkbox</a>.
+    </p>
+  </footer>
+
+  <script src="dist/js/bundle.js"></script>
+</body>
+
+</html>

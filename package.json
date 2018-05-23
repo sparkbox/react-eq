@@ -1,12 +1,11 @@
 {
-  "name": "react-eq",
+  "name": "react-eq-demo",
   "version": "0.1.3",
   "description": "Element Queries for React",
   "main": "lib/eq.js",
   "scripts": {
-    "prepublish": "babel ./src --out-dir ./lib",
-    "test": "webpack && karma start",
-    "start": "concurrently 'babel --watch ./src --out-dir ./lib' 'webpack -w' 'karma start --auto-watch'"
+    "start": "concurrently 'babel --watch ./src --out-dir ./lib' 'webpack -w' 'serve .'",
+    "styles": "node-sass src/scss/base.scss dist/css/base.css"
   },
   "repository": {
     "type": "git",
@@ -23,39 +22,18 @@
   },
   "homepage": "https://github.com/sparkbox/react-eq#readme",
   "dependencies": {
-    "autobind-decorator": "^1.4.1",
-    "custom-event-autopolyfill": "^0.1.3",
-    "prop-types": "^15.5.10"
+    "concurrently": "^3.5.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-eq": "^0.1.3",
+    "serve": "^6.5.8"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "chai": "^3.5.0",
-    "cheerio": "^1.0.0-rc.1",
-    "concurrently": "^3.5.0",
-    "eslint": "^3.18.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-config-airbnb-base": "^11.1.0",
-    "eslint-loader": "1.6.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0",
-    "karma": "^1.7.0",
-    "karma-babel-preprocessor": "^6.0.1",
-    "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^2.1.1",
-    "karma-mocha": "^1.3.0",
-    "karma-mocha-reporter": "^2.2.3",
-    "mocha": "^3.4.2",
-    "react": "^15.5.4",
-    "react-addons-test-utils": "^15.5.1",
-    "react-dom": "^15.5.4",
-    "webpack": "^2.6.1"
+    "node-sass": "^4.9.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4"
   }
 }

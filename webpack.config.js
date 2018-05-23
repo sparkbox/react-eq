@@ -1,24 +1,21 @@
+'use strict';
 const path = require('path');
 
 module.exports = {
-  entry: './test/eq-test.js',
+  mode: 'development',
+  entry: ['./src/js/index.js'],
   output: {
-    filename: 'tests.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'dist/js'),
+    filename: 'bundle.js'
   },
-  externals: {
-    jsdom: 'window',
-    'react/lib/ExecutionEnvironment': true,
-    'react/addons': true,
-    'react/lib/ReactContext': 'window',
-  },
+  devtool: 'cheap-module-source-map',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-      },
-    ],
-  },
+        include: /src/,
+        use: 'babel-loader'
+      }
+    ]
+  }
 };
