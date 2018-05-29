@@ -1,3 +1,5 @@
+@import 'icons/icons.data.svg';
+
 %icon {
   height: 45px;
   padding-left: 60px;
@@ -8,11 +10,6 @@
   @media (min-width: 55em) {
     font-size: 1.5em;
   }
-}
-
-.icon-bower {
-  @extend %icon;
-  background-image: url('../images/icon-bower.jpg');
 }
 
 .icon-github {

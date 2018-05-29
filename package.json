@@ -4,7 +4,7 @@
   "description": "Element Queries for React",
   "main": "lib/eq.js",
   "scripts": {
-    "start": "concurrently 'babel --watch ./src --out-dir ./lib' 'webpack -w' 'serve .'",
+    "start": "node tasks/start.js",
     "styles": "node-sass src/scss/base.scss dist/css/base.css"
   },
   "repository": {
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/sparkbox/react-eq#readme",
   "dependencies": {
     "concurrently": "^3.5.1",
+    "highlight.js": "^9.12.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-eq": "^0.1.3",

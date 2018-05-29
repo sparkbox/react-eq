@@ -1,13 +1,12 @@
 body {
-  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
   color: #686868;
-  // background: url('../images/congruent_outline.png');
   background-color: white;
   margin: 0;
 }
 
 a {
-  color: #50B7C8;
+  color: #50b7c8;
 }
 
 code {
@@ -15,15 +14,10 @@ code {
 }
 
 .content-wrapper {
-  @include box-sizing('border-box');
+  box-sizing: 'border-box';
   width: 95%;
   max-width: 50em;
   margin: 0 auto;
-
-  // @media (min-width: $bp-medium) {
-  //   padding: 2em 7%;
-  //   max-width: 75%;
-  // }
 }
 
 .main-heading {
@@ -36,12 +30,12 @@ code {
   background-size: contain;
   background-position: center center;
 
-  @media(min-width: $bp-medium) {
+  @media (min-width: $bp-medium) {
     margin: 3em auto;
   }
 
   &:after {
-    padding-top: (180/964)*100%;
+    padding-top: (180/964) * 100%;
     content: '';
     display: block;
   }
@@ -54,30 +48,29 @@ code {
 }
 
 .description {
-  // background: #eee;
-  // padding: 2em;
   font-size: 1.125em;
-  @media(min-width: $bp-medium) {
+  @media (min-width: $bp-medium) {
     font-size: 1.5em;
   }
 }
 
-.demo-area {
-  color: #fff;
-  height: 4em;
-  margin: .5em auto;
-  // border: 1px solid #686868;
-  border-radius: 0.375em;
-  text-align: center;
-  font-size: 1.7rem;
-  line-height: 4em;
+// .demo-area {
+//   color: #fff;
+//   height: 4em;
+//   margin: 0.5em auto;
+//   border-radius: 0.375em;
+//   display: inline-block;
+//   text-align: center;
+//   font-size: 1.7rem;
+//   line-height: 4em;
+//   width: 100%;
 
-  @media (min-width: $bp-medium) {
-    height: 5em;
-    font-size: 2rem;
-    line-height: 4.9;
-  }
-}
+//   @media (min-width: $bp-medium) {
+//     height: 5em;
+//     font-size: 2rem;
+//     line-height: 4.9;
+//   }
+// }
 
 .option {
   border-bottom: 1px solid #686868;
@@ -86,7 +79,7 @@ code {
 .section-heading {
   margin-top: 2em;
   font-size: 1.5em;
-  color: #50B7C8;
+  color: #50b7c8;
   @media (min-width: $bp-medium) {
     font-size: 1.9em;
   }

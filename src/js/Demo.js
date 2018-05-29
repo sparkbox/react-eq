@@ -1,23 +1,21 @@
 import React from 'react';
-import Heading from './Heading';
+import Movies from './Movies';
 
 const Demo = () => {
   return [
     <div
+      key="sidebar"
       className="demo-sidebar"
-      style={{ width: '33%', display: 'inline-block', backgroundColor: 'red' }}
+      style={{ width: '66%', display: 'inline-block' }}
     >
-      <Heading />
+      <Movies />
     </div>,
     <div
+      key="mainContent"
       className="demo-main"
-      style={{
-        width: '66%',
-        display: 'inline-block',
-        backgroundColor: 'yellow'
-      }}
+      style={{ width: '33%', display: 'inline-block' }}
     >
-      <Heading />
+      <Movies />
     </div>
   ];
 };
