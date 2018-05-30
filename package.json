@@ -4,8 +4,11 @@
   "description": "Element Queries for React",
   "main": "lib/eq.js",
   "scripts": {
-    "start": "node tasks/start.js",
-    "styles": "node-sass src/scss/base.scss dist/css/base.css"
+    "start": "parallelshell 'npm run js' 'npm run sass'",
+    "js": "node tasks/start.js",
+    "sass": "npm run styles && npm run watch",
+    "styles": "node-sass src/scss/base.scss dist/css/base.css",
+    "watch": "node tasks/watch.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
   "dependencies": {
     "concurrently": "^3.5.1",
     "highlight.js": "^9.12.0",
+    "parallelshell": "^3.0.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-eq": "^0.1.3",
@@ -33,7 +37,9 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "chokidar": "^2.0.3",
     "node-sass": "^4.9.0",
+    "shell": "^0.5.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.4"
   }
