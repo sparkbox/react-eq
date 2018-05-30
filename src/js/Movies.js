@@ -3,18 +3,23 @@ import ElementQuery from 'react-eq';
 
 const Movies = () => {
   const queries = {
-    small: 200,
+    small: 340,
     medium: 400
   };
 
   return (
     <ElementQuery queries={queries}>
-      <div className="movies">
-        <img
-          className="actor-image"
-          src="https://ia.media-imdb.com/images/M/MV5BMjE2MjI4NTQxN15BMl5BanBnXkFtZTgwMDMyMDg4NTE@._V1_UY317_CR18,0,214,317_AL_.jpg"
-        />
-        <h1 className="actor">Jack Black</h1>
+      <section className="movies">
+        <header className="actor">
+          <div className="actor-image-container">
+            <img
+              className="actor-image"
+              src="https://ia.media-imdb.com/images/M/MV5BMjE2MjI4NTQxN15BMl5BanBnXkFtZTgwMDMyMDg4NTE@._V1_UY317_CR18,0,214,317_AL_.jpg"
+            />
+          </div>
+          <h1 className="actor-name">Jack Black</h1>
+        </header>
+        <h2 className="movie-header">Filmography</h2>
         <ul className="movie-list">
           <li className="movie-list--item">
             <img
@@ -38,7 +43,7 @@ const Movies = () => {
             <span className="movie-title">School of Rock</span>
           </li>
         </ul>
-      </div>
+      </section>
     </ElementQuery>
   );
 };

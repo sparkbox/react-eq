@@ -39219,17 +39219,15 @@ var Demo = function Demo() {
   return [_react2.default.createElement(
     'div',
     {
-      key: 'sidebar',
-      className: 'demo-sidebar',
-      style: { width: '66%', display: 'inline-block' }
+      key: 'mainContent',
+      className: 'demo-main'
     },
     _react2.default.createElement(_Movies2.default, null)
   ), _react2.default.createElement(
     'div',
     {
-      key: 'mainContent',
-      className: 'demo-main',
-      style: { width: '33%', display: 'inline-block' }
+      key: 'sidebar',
+      className: 'demo-sidebar'
     },
     _react2.default.createElement(_Movies2.default, null)
   )];
@@ -39265,7 +39263,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Movies = function Movies() {
   var queries = {
-    small: 200,
+    small: 340,
     medium: 400
   };
 
@@ -39273,16 +39271,29 @@ var Movies = function Movies() {
     _reactEq2.default,
     { queries: queries },
     _react2.default.createElement(
-      'div',
+      'section',
       { className: 'movies' },
-      _react2.default.createElement('img', {
-        className: 'actor-image',
-        src: 'https://ia.media-imdb.com/images/M/MV5BMjE2MjI4NTQxN15BMl5BanBnXkFtZTgwMDMyMDg4NTE@._V1_UY317_CR18,0,214,317_AL_.jpg'
-      }),
       _react2.default.createElement(
-        'h1',
+        'header',
         { className: 'actor' },
-        'Jack Black'
+        _react2.default.createElement(
+          'div',
+          { className: 'actor-image-container' },
+          _react2.default.createElement('img', {
+            className: 'actor-image',
+            src: 'https://ia.media-imdb.com/images/M/MV5BMjE2MjI4NTQxN15BMl5BanBnXkFtZTgwMDMyMDg4NTE@._V1_UY317_CR18,0,214,317_AL_.jpg'
+          })
+        ),
+        _react2.default.createElement(
+          'h1',
+          { className: 'actor-name' },
+          'Jack Black'
+        )
+      ),
+      _react2.default.createElement(
+        'h2',
+        { className: 'movie-header' },
+        'Filmography'
       ),
       _react2.default.createElement(
         'ul',

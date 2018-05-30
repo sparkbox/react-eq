@@ -1,41 +1,123 @@
+@media (min-width: 40rem) {
+  .demo-area {
+    display: flex; }
+    @supports (display: grid) {
+      .demo-area {
+        display: grid;
+        grid-template-columns: 7fr 3fr;
+        grid-gap: 1rem; } } }
+
+.demo-sidebar {
+  margin-top: 1rem; }
+  @media (min-width: 40rem) {
+    .demo-sidebar {
+      width: 30%;
+      margin: 0 0 0 0.5rem; }
+      @supports (display: grid) {
+        .demo-sidebar {
+          width: auto;
+          margin: 0; } } }
+
+@media (min-width: 40rem) {
+  .demo-main {
+    width: 70%;
+    margin-right: 0.5rem; }
+    @supports (display: grid) {
+      .demo-main {
+        width: auto;
+        margin: 0; } } }
+
 .actor {
-  width: 100%;
-  text-align: center; }
+  display: flex;
+  background-color: #eee; }
+
+.actor-name {
+  flex-grow: 2;
+  margin: 0 1rem;
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center; }
+  [data-eq-state~='medium'] .actor-name {
+    font-size: 3rem; }
+
+.actor-image-container {
+  width: 40%; }
+  [data-eq-state~='medium'] .actor-image-container {
+    width: 25%; }
 
 .actor-image {
   margin: 0 auto;
-  display: inherit; }
+  display: inherit;
+  width: 100%; }
 
-[data-eq-state~='small'] .movie-image {
-  display: none; }
+.movie-header {
+  margin: 0;
+  background-color: #333;
+  color: #eee;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  letter-spacing: 0.0625em;
+  text-align: center; }
+  [data-eq-state~='medium'] .movie-header {
+    background-color: transparent;
+    color: #333;
+    font-size: 1.25rem;
+    letter-spacing: 0.125em;
+    padding: 0 0 1rem;
+    margin: 1rem 0;
+    border-bottom: 1px solid #ddd; }
+
+.movie-list {
+  margin: 0;
+  padding: 1rem;
+  list-style: none;
+  background-color: #444; }
+  [data-eq-state~='medium'] .movie-list {
+    margin: 1rem 0;
+    padding: 0;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em; }
 
 [data-eq-state~='small'] .movie-list--item {
   position: relative; }
-
-[data-eq-state~='medium'] .movie-image {
-  display: block; }
-
-[data-eq-state~='medium'] .movie-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em; }
 
 [data-eq-state~='medium'] .movie-list--item {
   display: flex;
   align-items: center;
   justify-content: center; }
 
-[data-eq-state~='medium'] .movie-title {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  padding: 0.5rem;
-  box-sizing: border-box;
-  min-height: 4rem; }
+.movie-list--item + .movie-list--item {
+  margin-top: 1rem; }
+  [data-eq-state~='medium'] .movie-list--item + .movie-list--item {
+    margin-top: 0; }
+
+.movie-image {
+  display: none; }
+  [data-eq-state~='medium'] .movie-image {
+    display: block;
+    width: 100%; }
+
+.movie-title {
+  color: white;
+  font-weight: bold; }
+  [data-eq-state~='medium'] .movie-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(0.75rem);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    min-height: 4rem; }
 
 /*
 Monokai style - ported by Luigi Maselli - http://grigio.org
