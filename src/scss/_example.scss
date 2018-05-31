@@ -1,3 +1,7 @@
+.example-pre {
+  margin: 0;
+}
+
 .exampleList {
   list-style: none;
   padding: 0;
@@ -7,7 +11,7 @@
 .exampleList-item {
   display: inline-block;
 
-  &.active {
+  &:target {
     background: #49483e;
   }
 }
@@ -21,17 +25,9 @@
     color: #686868;
     text-decoration: none;
 
-    .active & {
+    :target & {
       color: #fff;
     }
-  }
-}
-
-.example {
-  display: none;
-
-  &.active {
-    display: block;
   }
 }
 
@@ -39,7 +35,7 @@
   overflow: scroll;
   margin: 0;
   font-size: 0.75em;
-  @media(min-width: $bp-medium) {
+  @media (min-width: $bp-medium) {
     font-size: 1em;
   }
 }

@@ -4,20 +4,14 @@
   "description": "Element Queries for React",
   "main": "lib/eq.js",
   "scripts": {
-    "start": "parallelshell 'npm run js' 'npm run sass'",
-    "js": "node tasks/start.js",
-    "sass": "npm run styles && npm run watch",
-    "styles": "node-sass src/scss/base.scss dist/css/base.css",
-    "watch": "node tasks/watch.js"
+    "start": "node tasks/start.js",
+    "styles": "node-sass src/scss/base.scss dist/css/base.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sparkbox/react-eq.git"
   },
-  "keywords": [
-    "react",
-    "element-query"
-  ],
+  "keywords": ["react", "element-query"],
   "author": "Rob Tarr",
   "license": "ISC",
   "bugs": {

@@ -53,24 +53,67 @@
       <h2 class="section-heading">Demo</h2>
       <div class="demo-area"></div>
 
-      <div>
-        <h2 class="section-heading">Examples</h2>
+      <h2 class="section-heading">Code</h2>
 
-        <pre><code>  import React from 'react';
-  import ElementQuery from 'react-eq';
+      <div class="example">
+        <h3 class="exampleList-heading">
+          &lt;Demo /&gt;
+        </h3>
+        <pre class="example-pre"><code>  const Demo = () => [
+    &lt;div key="mainContent" className="demo-main"&gt;
+      &lt;Movies /&gt;
+    &lt;/div&gt;,
+    &lt;div key="sidebar" className="demo-sidebar"&gt;
+      &lt;Movies /&gt;
+    &lt;/div&gt;
+  ];</code></pre>
+      </div>
 
-  const Demo = () => {
-    const queries = {
-      'small': 200,
-      'medium': 400
-    };
-      
-    return (
-      &lt;ElementQuery queries={queries}&gt;
-        &lt;h1&gt;Hello&lt;/h1&gt;
-      &lt;/ElementQuery&gt;
-    );
-  };</code></pre>
+      <div class="example">
+        <h3 class="exampleList-heading">
+          &lt;Movies /&gt;
+        </h3>
+        <pre class="example-pre"><code>  const Movies = () => { const
+    queries = { small: 340, medium: 400 }; return (
+    &lt;ElementQuery queries={queries}&gt;
+      &lt;section className="movies"&gt;
+        &lt;header className="actor"&gt;
+          &lt;div className="actor-image-container"&gt;
+            &lt;img className="actor-image" src="https://ia.media-imdb.com/images/M/MV5BMjE2MjI4NTQxN15BMl5BanBnXkFtZTgwMDMyMDg4NTE@._V1_UY317_CR18,0,214,317_AL_.jpg"
+            /&gt;
+          &lt;/div&gt;
+          &lt;h1 className="actor-name"&gt;Jack Black&lt;/h1&gt;
+        &lt;/header&gt;
+        &lt;h2 className="movie-header"&gt;Filmography&lt;/h2&gt;
+        &lt;ul className="movie-list"&gt;
+          &lt;Movie
+            title="Jumanji: Welcome to the Jungle"
+            img="https://ia.media-imdb.com/images/M/MV5BODQ0NDhjYWItYTMxZi00NTk2LWIzNDEtOWZiYWYxZjc2MTgxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg"
+          /&gt;
+          &lt;Movie
+            title="Kung Fu Panda"
+            img="https://ia.media-imdb.com/images/M/MV5BODJkZTZhMWItMDI3Yy00ZWZlLTk4NjQtOTI1ZjU5NjBjZTVjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UY268_CR1,0,182,268_AL_.jpg"
+          /&gt;
+          &lt;Movie
+            title="School of Rock"
+            img="https://ia.media-imdb.com/images/M/MV5BMjEwOTMzNjYzMl5BMl5BanBnXkFtZTcwNjczMTQyMQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+          /&gt;
+        &lt;/ul&gt;
+      &lt;/section&gt;
+    &lt;/ElementQuery&gt;
+  );</code></pre>
+      </div>
+
+      <div class="example">
+        <h3 class="exampleList-heading">
+          &lt;Movie /&gt;
+        </h3>
+        <pre class="example-pre"><code>  const Movie = ({ title, img }) => (
+    &lt;li className="movie-list--item"&gt;
+      &lt;img className="movie-image" src={img} /&gt;
+      &lt;span className="movie-title"&gt;{title}&lt;/span&gt;
+    &lt;/li&gt;
+  );</code></pre>
       </div>
 
       <div>

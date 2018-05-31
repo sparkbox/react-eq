@@ -39218,22 +39218,55 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Demo = function Demo() {
   return [_react2.default.createElement(
     'div',
-    {
-      key: 'mainContent',
-      className: 'demo-main'
-    },
+    { key: 'mainContent', className: 'demo-main' },
     _react2.default.createElement(_Movies2.default, null)
   ), _react2.default.createElement(
     'div',
-    {
-      key: 'sidebar',
-      className: 'demo-sidebar'
-    },
+    { key: 'sidebar', className: 'demo-sidebar' },
     _react2.default.createElement(_Movies2.default, null)
   )];
 };
 
 exports.default = Demo;
+
+/***/ }),
+
+/***/ "./src/js/Movie.js":
+/*!*************************!*\
+  !*** ./src/js/Movie.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Movie = function Movie(_ref) {
+  var title = _ref.title,
+      img = _ref.img;
+  return _react2.default.createElement(
+    "li",
+    { className: "movie-list--item" },
+    _react2.default.createElement("img", { className: "movie-image", src: img }),
+    _react2.default.createElement(
+      "span",
+      { className: "movie-title" },
+      title
+    )
+  );
+};
+
+exports.default = Movie;
 
 /***/ }),
 
@@ -39258,6 +39291,10 @@ var _react2 = _interopRequireDefault(_react);
 var _reactEq = __webpack_require__(/*! react-eq */ "./node_modules/react-eq/lib/eq.js");
 
 var _reactEq2 = _interopRequireDefault(_reactEq);
+
+var _Movie = __webpack_require__(/*! ./Movie */ "./src/js/Movie.js");
+
+var _Movie2 = _interopRequireDefault(_Movie);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39298,45 +39335,18 @@ var Movies = function Movies() {
       _react2.default.createElement(
         'ul',
         { className: 'movie-list' },
-        _react2.default.createElement(
-          'li',
-          { className: 'movie-list--item' },
-          _react2.default.createElement('img', {
-            className: 'movie-image',
-            src: 'https://ia.media-imdb.com/images/M/MV5BODQ0NDhjYWItYTMxZi00NTk2LWIzNDEtOWZiYWYxZjc2MTgxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg'
-          }),
-          _react2.default.createElement(
-            'span',
-            { className: 'movie-title' },
-            'Jumanji: Welcome to the Jungle'
-          )
-        ),
-        _react2.default.createElement(
-          'li',
-          { className: 'movie-list--item' },
-          _react2.default.createElement('img', {
-            className: 'movie-image',
-            src: 'https://ia.media-imdb.com/images/M/MV5BODJkZTZhMWItMDI3Yy00ZWZlLTk4NjQtOTI1ZjU5NjBjZTVjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UY268_CR1,0,182,268_AL_.jpg'
-          }),
-          _react2.default.createElement(
-            'span',
-            { className: 'movie-title' },
-            'Kung Fu Panda'
-          )
-        ),
-        _react2.default.createElement(
-          'li',
-          { className: 'movie-list--item' },
-          _react2.default.createElement('img', {
-            className: 'movie-image',
-            src: 'https://ia.media-imdb.com/images/M/MV5BMjEwOTMzNjYzMl5BMl5BanBnXkFtZTcwNjczMTQyMQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
-          }),
-          _react2.default.createElement(
-            'span',
-            { className: 'movie-title' },
-            'School of Rock'
-          )
-        )
+        _react2.default.createElement(_Movie2.default, {
+          title: 'Jumanji: Welcome to the Jungle',
+          img: 'https://ia.media-imdb.com/images/M/MV5BODQ0NDhjYWItYTMxZi00NTk2LWIzNDEtOWZiYWYxZjc2MTgxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg'
+        }),
+        _react2.default.createElement(_Movie2.default, {
+          title: 'Kung Fu Panda',
+          img: 'https://ia.media-imdb.com/images/M/MV5BODJkZTZhMWItMDI3Yy00ZWZlLTk4NjQtOTI1ZjU5NjBjZTVjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UY268_CR1,0,182,268_AL_.jpg'
+        }),
+        _react2.default.createElement(_Movie2.default, {
+          title: 'School of Rock',
+          img: 'https://ia.media-imdb.com/images/M/MV5BMjEwOTMzNjYzMl5BMl5BanBnXkFtZTcwNjczMTQyMQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
+        })
       )
     )
   );

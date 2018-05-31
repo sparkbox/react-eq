@@ -9,12 +9,13 @@ const devStartupTasks = ['npm run styles'];
 const devParallelTasks = [
   '"babel --watch ./src --out-dir ./lib"',
   '"webpack -w --color"',
+  '"npm run styles -- -w"',
   '"serve ."'
 ];
 const prodTasks = [
-  'npm run styles.js',
   '"babel ./src --out-dir ./lib"',
-  '"webpack -p --color"'
+  '"webpack -p --color"',
+  '"npm run styles"'
 ];
 
 console.info(chalk.green(`Starting for ${env}...`));
